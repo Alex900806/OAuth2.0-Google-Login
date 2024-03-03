@@ -21,6 +21,6 @@
 
 ## 實際頁面
 
-![image](https://github.com/Alex900806/OAuth2.0-Google-Login/blob/main/demo_pictures/login.jpg)
-![image](https://github.com/Alex900806/OAuth2.0-Google-Login/blob/main/demo_pictures/login2.jpg)
-![image](https://github.com/Alex900806/OAuth2.0-Google-Login/blob/main/demo_pictures/login3.jpg)
+![image](https://github.com/Alex900806/OAuth2.0-Google-Login/blob/main/demo_pictures/login.png)
+![image](https://github.com/Alex900806/OAuth2.0-Google-Login/blob/main/demo_pictures/login2.png)
+![image](https://github.com/Alex900806/OAuth2.0-Google-Login/blob/main/demo_pictures/login3.png)
