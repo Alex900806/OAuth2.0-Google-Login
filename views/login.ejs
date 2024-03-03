@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+  <head>
+    <%- include ("partials/header") %>
+    <title>登入</title>
+  </head>
+  <body>
+
+    <!-- NAVBAR -->
+    <%- include ("partials/nav") %>
+
+    <!-- 內文 -->
+    <main style="padding: 3rem">
+      <div class="row">
+        <div ass="col-md-12">
+          <a
+            class="btn btn-lg btn-google"
+            style="
+              padding: 0.2rem 0.5rem;
+              background-color: rgb(7, 7, 7);
+              color: rgb(255, 255, 255);
+            "
+            href="/auth/google"
+            ><img
+              src="https://img.icons8.com/color/16/000000/google-logo.png"
+            />
+            用 Google 來登入</a
+          >
+        </div>
+      </div> 
+      <br />
+      <h4>或是你有帳號，可以從這裡登入</h2>
+
+     <!-- 表單 -->
+     <%- include ("partials/message") %>
+      <form  action="/auth/login" method="POST">
+        <div class="form-group">
+          <label for="exampleInputEmail1">電子郵件</label>
+          <input
+            type="email"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            placeholder="Enter email"
+            name="username"
+          />
+          <small id="emailHelp" class="form-text text-muted"
+            >我們將不會洩漏任何資訊</small
+          >
+        </div>
+        <br />
+        <div class="form-group">
+          <label for="exampleInputPassword1">密碼</label>
+          <input
+            type="password"
+            class="form-control"
+            id="exampleInputPassword1"
+            placeholder="Password" 
+            name="password"
+          />
+        </div>
+        <br />
+        <button type="submit" class="btn btn-primary">送出</button>
+      </form>
+    </main>
+  </body>
+</html>

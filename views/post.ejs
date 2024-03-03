@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+  <head>
+    <%- include ("partials/header") %>
+    <title>貼文</title>
+  </head>
+  <body>
+    <%- include ("partials/nav") %>
+    <main style="padding: 3rem">
+      <%- include ("partials/message") %>
+      <form action="/profile/post" method="POST">
+        <div class="form-group">
+          <label for="exampleforTitle">標題</label>
+          <input
+            name="title"
+            type="text"
+            class="form-control"
+            id="exampleforTitle"
+          />
+        </div>
+        <br />
+        <div class="form-group">
+          <label for="exampleforContent">內文</label>
+          <textarea
+            class="form-control"
+            id="exampleforContent"
+            aria-describedby="emailHelp"
+            name="content"
+          /></textarea>
+        <br />
+        <button type="submit" class="btn btn-primary">送出</button>
+      </form>
+    </main>
+  </body>
+</html>
