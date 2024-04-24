@@ -4,15 +4,20 @@ const LocalStrategy = require("passport-local");
 const User = require("../models/user.module");
 const bcrypt = require("bcrypt");
 
+// 接收下面 passport 的 done 後執行的函數
+// 會將 req.isAuthenticated 設定為 True
 passport.serializeUser((user, done) => {
   console.log("Serializing user now");
+  // 這個 user._id 會存在 session，然後簽名後用 cookies 傳給使用者
   done(null, user._id);
 });
 
+// 將 session 內部的 id 跟資料庫做比對
 passport.deserializeUser((_id, done) => {
   console.log("Deserializing user now");
   User.findById({ _id }).then((user) => {
     console.log("找到使用者了");
+    // deserializeUser 會自動將 req.user 設定為 user
     done(null, user);
   });
 });
