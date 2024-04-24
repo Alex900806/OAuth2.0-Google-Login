@@ -14,6 +14,7 @@ const authCheck = (req, res, next) => {
 //個人資料
 router.get("/", authCheck, async (req, res) => {
   let postFound = await Post.find({ author: req.user._id });
+  // 可以用 request.user 是因為有 deserializeUser
   res.render("profile.ejs", { user: req.user, posts: postFound });
 });
 

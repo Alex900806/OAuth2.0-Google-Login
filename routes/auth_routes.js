@@ -52,7 +52,7 @@ router.post("/signUp", async (req, res, next) => {
   }
 });
 
-//登出相關
+//登出相關（passport 內建方法）
 router.get("/logout", (req, res, next) => {
   req.logout((err) => {
     if (err) {
